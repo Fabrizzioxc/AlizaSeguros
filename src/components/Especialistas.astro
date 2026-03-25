@@ -1,0 +1,45 @@
+---
+// src/components/Especialistas.astro
+import { ArrowRight } from 'lucide-astro';
+---
+
+<section class="w-full bg-white py-24 md:py-32 overflow-hidden">
+  <div class="grid md:grid-cols-2 items-center gap-16 lg:gap-15">
+    
+    <div class="relative w-full h-112.5 md:h-180">
+      <div class="absolute inset-y-0 left-0 w-full overflow-hidden shadow-2xl shadow-slate-200">
+        <img 
+          src="/img/sctr-cumplimiento-sunafil.webp" 
+          alt="Especialistas de Aliza Seguros verificando cumplimiento de SCTR en obra ante SUNAFIL" 
+          class="w-full h-full object-cover shadow-inner"
+        />
+      </div>
+    </div>
+
+    <div class="px-6 md:pr-12 lg:pr-24">
+      <div class="max-w-xl space-y-8">
+        
+        <div class="flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-slate-900"></span>
+          <span class="text-sm font-bold text-slate-900 uppercase tracking-[0.15em]">Especialistas en SCTR</span>
+        </div>
+
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] tracking-tighter">
+          Protección legal total y cumplimiento ante <span class="text-[#B61F1F]">SUNAFIL</span> garantizado
+        </h2>
+
+        <p class="text-lg md:text-xl text-slate-600 leading-relaxed font-light italic border-l-4 border-slate-100 pl-6">
+          Evita multas de SUNAFIL y paralizaciones de obra con una afiliación inmediata. Tramitamos tu SCTR de forma digital para que tu equipo ingrese a trabajar hoy mismo.
+        </p>
+
+        <div class="pt-4">
+          <a href="#contacto" class="group inline-flex items-center justify-center gap-3 bg-[#B61F1F] hover:bg-[#961a1a] text-white px-10 py-5 font-bold text-base transition-all rounded-[5px] shadow-xl shadow-red-900/20">
+            Obtener Cotización Instantánea
+            <ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
