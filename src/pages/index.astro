@@ -4,11 +4,12 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Especialistas from '../components/Especialistas.astro';
-
+import WhyUs from '../components/WhyUs.tsx';
 ---
 
 <Layout>
     <Header />
     <Hero />
     <Especialistas />
+    <WhyUs client:load />
 </Layout>
