@@ -1,0 +1,151 @@
+---
+import {
+  HeartPulse,
+  HandCoins,
+  CheckCircle2,
+  AlertTriangle,
+} from "lucide-astro";
+
+import Badge from "@/components/Badge.astro";
+
+/* =========================
+   TYPES
+========================= */
+type IconKey = "health" | "pension";
+
+type Card = {
+  title: string;
+  description: string;
+  icon: IconKey;
+  iconBg: string;
+  iconColor: string;
+  borderColor: string;
+  items: string[];
+};
+
+/* =========================
+   DATA
+========================= */
+const sctrCoverage: Card[] = [
+  {
+    title: "SCTR Salud",
+    description:
+      "Nos ocupamos de la recuperación completa del trabajador sin que asuma costos extra.",
+    icon: "health",
+    iconBg: "bg-[#FDECEC]",
+    iconColor: "text-[#B61F1F]",
+    borderColor: "border-[#B61F1F]/10",
+    items: [
+      "Atención médica especializada e inmediata.",
+      "Medicamentos durante el tratamiento.",
+      "Cirugías, hospitalización y cuidados intensivos.",
+      "Rehabilitación física y terapias de recuperación.",
+    ],
+  },
+  {
+    title: "SCTR Pensión",
+    description:
+      "Protegemos el futuro financiero del trabajador y la estabilidad de su familia.",
+    icon: "pension",
+    iconBg: "bg-[#EAF8EF]",
+    iconColor: "text-green-600",
+    borderColor: "border-[#16A34A]/15",
+    items: [
+      "Pensión de invalidez parcial o total.",
+      "Pensión de sobrevivencia para la familia.",
+      "Indemnización por fallecimiento.",
+      "Gastos de sepelio cubiertos.",
+    ],
+  },
+];
+
+/* =========================
+   ICON MAP
+========================= */
+const iconMap: Record<IconKey, any> = {
+  health: HeartPulse,
+  pension: HandCoins,
+};
+---
+
+<section id="que-es" class="bg-[#F4F4F4] py-20 md:py-32 px-6">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Header -->
+    <div class="mb-16">
+      
+      <!-- Badge reutilizable -->
+      <Badge 
+        text="Coberturas del SCTR" 
+        variant="default" 
+        size="md"
+        className="mb-6"
+      />
+
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-[1.1] text-slate-950 max-w-3xl">
+        ¿Qué cubre realmente tu SCTR?
+      </h2>
+
+      <p class="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed font-light max-w-2xl">
+        El SCTR es un seguro obligatorio en Perú para trabajos de riesgo. Incluye dos coberturas clave que trabajan juntas para proteger al trabajador.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-2 gap-8 items-stretch">
+      {sctrCoverage.map((card) => {
+        const Icon = iconMap[card.icon];
+
+        return (
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full">
+            
+            {/* Barra roja */}
+            <div class="h-3 bg-[#B61F1F]"></div>
+
+            <div class="p-12 flex flex-col flex-1">
+              
+              {/* Header */}
+              <div class="flex items-center gap-4 mb-4">
+                <div class={`w-12 h-12 rounded-xl flex items-center justify-center border ${card.iconBg} ${card.borderColor}`}>
+                  <Icon size={22} class={card.iconColor} />
+                </div>
+
+                <h3 class="text-xl md:text-2xl font-bold tracking-tight text-slate-950">
+                  {card.title}
+                </h3>
+              </div>
+
+              {/* Descripción */}
+              <p class="text-slate-600 leading-relaxed font-light">
+                {card.description}
+              </p>
+
+              {/* Lista */}
+              <ul class="mt-auto pt-6 space-y-4">
+                {card.items.map((item) => (
+                  <li class="flex items-start gap-3">
+                    <CheckCircle2 size={22} class="text-green-600 mt-0.5" />
+                    <span class="text-lg text-slate-950 leading-relaxed">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- Callout -->
+    <div class="mt-12 rounded-xl border border-[#FDBA74] bg-[#FFEDD5] px-6 py-5 flex items-start gap-4">
+      <AlertTriangle size={22} class="text-[#B45309] mt-1" />
+      <div>
+        <p class="text-base md:text-lg text-slate-950 leading-relaxed font-light">
+          <span class="font-bold">¿Necesito ambos?</span> Sí. La ley peruana exige que el SCTR contemple tanto la cobertura de Salud como la de Pensión para ser válido ante SUNAFIL.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
