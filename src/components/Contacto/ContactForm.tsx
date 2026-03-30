@@ -20,7 +20,7 @@ export default function ContactForm() {
         <h3 className="text-2xl sm:text-3xl font-bold text-black mb-2 tracking-tight">
           ¡Obtén una cotización ahora!
         </h3>
-        <p className="text-sm text-gray-500 font-['Inter']">
+        <p className="text-sm text-gray-500">
           Completa tus datos y recibe tu SCTR rápidamente.
         </p>
       </div>
@@ -136,8 +136,8 @@ export default function ContactForm() {
         {/* Políticas de Privacidad */}
         <div className="space-y-3 pt-4 border-t border-gray-50">
           <label className="flex items-start gap-3 group cursor-pointer">
-            <input type="checkbox" className="mt-1 w-4 h-4 rounded border-gray-200 text-[#B61F1F] focus:ring-[#B61F1F]/20" />
-            <span className="text-[11px] text-gray-500 leading-tight">He leído y acepto la <a href="#" className="text-[#B61F1F] font-semibold hover:underline">política de privacidad</a> y el tratamiento de mis datos.</span>
+            <input type="checkbox" className=" w-5 h-5 rounded border-gray-200 text-[#B61F1F] focus:ring-[#B61F1F]/20" />
+            <span className="text-sm text-gray-500 leading-tight">He leído y acepto la <a href="/politicas-privacidad" className="text-[#B61F1F] font-semibold hover:underline">política de privacidad</a> y el tratamiento de mis datos.</span>
           </label>
         </div>
 
