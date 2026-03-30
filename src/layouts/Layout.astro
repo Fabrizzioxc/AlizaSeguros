@@ -2,6 +2,11 @@
 import Footer from '@/components/Footer.astro'
 import Header from '@/components/Header.astro'
 import '../styles/global.css'
+
+const { 
+  title = "Aliza Seguros",
+  description = "Obtén tu SCTR en Perú de forma rápida y digital. Cumple con SUNAFIL sin complicaciones."
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -11,8 +16,13 @@ import '../styles/global.css'
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Aliza Seguros</title>
+		<meta name="robots" content="index, follow" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/og-image.jpg" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 	</head>
 	<body>
 	    <Header />
