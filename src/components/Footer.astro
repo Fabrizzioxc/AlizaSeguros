@@ -71,24 +71,24 @@ const {
     <div class="flex flex-col lg:flex-row justify-between gap-8 mb-8">
       
       <!-- Contacto -->
-      <div class="flex-1">
-        <span class="text-xs font-bold text-white uppercase tracking-widest bg-[#B61F1F] px-3 py-1.5 rounded">
-          Contacto
+    <div class="flex-1">
+        <span class="inline-block text-xs font-bold text-white uppercase tracking-widest bg-[#B61F1F] px-3 py-1.5 rounded">
+        Contacto
         </span>
 
-        <div class="mt-4 space-y-3 text-sm text-gray-300">
-          <a href={`mailto:${email}`} class="block hover:text-[#B61F1F] transition">
+        <div class="mt-4 space-y-3 text-sm text-gray-300 flex flex-col items-start">
+        <a href={`mailto:${email}`} class="hover:text-[#B61F1F] transition w-fit">
             {email}
-          </a>
-          <a href={`tel:${phone}`} class="block hover:text-[#B61F1F] transition">
+        </a>
+        <a href={`tel:${phone}`} class="hover:text-[#B61F1F] transition w-fit">
             {phone}
-          </a>
-          <span>{address}</span>
+        </a>
+        <span>{address}</span>
         </div>
-      </div>
+    </div>
 
-      <!-- FORM CORREGIDO -->
-      <form class="flex flex-col sm:flex-row items-stretch gap-3 bg-[#292A32] p-4 rounded-xl border border-white/10 w-full lg:w-auto lg:min-w-230">
+      <!-- FORM -->
+      <form class="flex flex-col sm:flex-row items-stretch gap-3 bg-[#292A32] p-3 rounded-xl border border-white/10 w-full lg:w-auto lg:min-w-230">
         
         <input
           type="email"
@@ -99,7 +99,7 @@ const {
 
         <button
           type="submit"
-          class="px-6 py-3 bg-[#B61F1F] hover:bg-[#961a1a] text-white font-semibold text-sm rounded-lg transition-all whitespace-nowrap hover:-translate-y-0.5 flex-shrink-0"
+          class="px-6 py-3 bg-[#B61F1F] hover:bg-[#961a1a] text-white font-semibold text-sm rounded-lg transition-all whitespace-nowrap hover:-translate-y-0.5 shrink-0"
         >
           Enviar
         </button>
