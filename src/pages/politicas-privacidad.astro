@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const empresa = "Aliza Seguros";
+const telefono = "917 410 446";
+const ubicacion = "Lima, Perú";
+const correo = "contacto@alizaseguros.com"; // puedes cambiarlo luego
+---
+
+<Layout>
+  <section class="bg-white py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-10 text-slate-900">
+        Políticas de Privacidad
+      </h1>
+
+      <div class="text-slate-600 leading-relaxed space-y-6 text-justify">
+
+        <p>
+          En <strong>{empresa}</strong>, nos comprometemos a proteger la privacidad y los datos personales de nuestros usuarios.
+          La presente Política de Privacidad describe la forma en la que recopilamos, utilizamos, almacenamos y protegemos
+          la información que nos proporcionas a través de nuestro sitio web, formularios digitales y canales de comunicación.
+          Al acceder y utilizar este sitio web, aceptas los términos establecidos en esta política.
+        </p>
+
+        <p>
+          Los datos personales que recopilamos pueden incluir, entre otros, nombre completo, número de documento de identidad (DNI),
+          número de RUC, razón social, número telefónico y correo electrónico. Esta información es proporcionada de manera voluntaria
+          por el usuario a través de formularios de contacto, solicitudes de cotización o comunicación directa mediante nuestros canales
+          digitales como correo electrónico o WhatsApp.
+        </p>
+
+        <p>
+          La información recopilada es utilizada con la finalidad de brindar asesoría y cotización de productos de seguros tales como
+          SCTR, Vida Ley, TREC, CAR, Responsabilidad Civil y seguros vehiculares, así como para gestionar la contratación de pólizas,
+          dar seguimiento a solicitudes, contactar al usuario mediante llamadas telefónicas, correos electrónicos o mensajería instantánea,
+          y ofrecerle alternativas que se ajusten a sus necesidades. Asimismo, los datos podrán ser utilizados para fines administrativos
+          internos relacionados con la prestación del servicio.
+        </p>
+
+        <p>
+          {empresa} podrá compartir la información proporcionada con compañías aseguradoras y aliados estratégicos con el único propósito
+          de evaluar, procesar y gestionar las solicitudes de seguros, permitiendo así ofrecer al usuario la opción más conveniente según
+          su perfil y requerimientos. En ningún caso comercializamos, vendemos o cedemos los datos personales a terceros para fines distintos
+          a los aquí descritos.
+        </p>
+
+        <p>
+          El uso de WhatsApp como canal de comunicación implica la aceptación por parte del usuario de recibir información, cotizaciones
+          y respuestas a sus consultas a través de dicha plataforma. Asimismo, el usuario reconoce que este medio puede implicar el tratamiento
+          de datos personales de acuerdo con las políticas propias del servicio.
+        </p>
+
+        <p>
+          Los datos personales serán almacenados durante el tiempo necesario para cumplir con las finalidades para las cuales fueron recopilados,
+          así como para atender posibles responsabilidades legales o contractuales, salvo que el usuario solicite expresamente su eliminación.
+        </p>
+
+        <p>
+          {empresa} adopta las medidas de seguridad técnicas, organizativas y legales necesarias para proteger los datos personales contra pérdida,
+          acceso no autorizado, alteración o uso indebido. No obstante, el usuario reconoce que ningún sistema es completamente seguro, por lo que
+          no se puede garantizar una seguridad absoluta.
+        </p>
+
+        <p>
+          El usuario tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales, así como a revocar su consentimiento
+          en cualquier momento. Para ejercer estos derechos, podrá enviar una solicitud al correo electrónico {correo}, indicando claramente su petición.
+        </p>
+
+        <p>
+          Este sitio web podrá utilizar en el futuro herramientas de análisis como Google Analytics u otras tecnologías similares con la finalidad
+          de obtener información estadística sobre el uso del sitio web, mejorar la experiencia del usuario y optimizar nuestros servicios.
+          Esta información será tratada de manera anónima y no permitirá la identificación directa del usuario.
+        </p>
+
+        <p>
+          {empresa} se reserva el derecho de modificar, actualizar o complementar esta Política de Privacidad en cualquier momento,
+          en función de cambios normativos o mejoras en nuestros servicios. Cualquier modificación será publicada en esta misma página,
+          por lo que se recomienda revisarla periódicamente.
+        </p>
+
+        <p>
+          El uso de este sitio web, así como el envío de información a través de sus formularios o canales de contacto, implica la aceptación
+          expresa de los términos establecidos en la presente Política de Privacidad.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+</Layout>
