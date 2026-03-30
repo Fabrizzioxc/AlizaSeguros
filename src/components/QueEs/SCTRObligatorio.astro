@@ -1,0 +1,85 @@
+---
+import { ShieldCheck } from "lucide-react";
+import Badge from "../Badge.astro";
+import { AlertTriangle, Clock4, XCircle, ArrowRight } from "lucide-astro";
+
+const risks = [
+  { 
+    text: "Multas de SUNAFIL", 
+    icon: AlertTriangle, 
+    desc: "Sanciones económicas que impactan la rentabilidad de tu proyecto." 
+  },
+  { 
+    text: "Paralización de Obra", 
+    icon: Clock4, 
+    desc: "Suspensión de actividades hasta regularizar la situación del seguro." 
+  },
+  { 
+    text: "Bloqueo de Accesos", 
+    icon: XCircle, 
+    desc: "Restricción inmediata para ingresar a garitas y zonas de riesgo." 
+  }
+];
+---
+
+<section class="bg-white min-h-screen flex items-center py-20 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      
+      <div class="flex flex-col space-y-10 order-2 lg:order-1">
+        <div>
+          <Badge text="Normativa Vigente" variant="default" size="sm" className="mb-6 border-black/10 text-black/60" />
+          <h2 class="text-4xl md:text-6xl font-extrabold text-black leading-[1.1] tracking-tighter mb-8">
+            El SCTR es <span class="text-[#B61F1F]">obligatorio</span> para trabajos de riesgo.
+          </h2>
+          <p class="text-gray-500 text-lg md:text-xl leading-relaxed max-w-xl">
+            Toda empresa o trabajador independiente en actividades de alto riesgo debe contar con este seguro por ley. Ignorarlo genera riesgos críticos:
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          {risks.map((risk) => (
+            <div class="group flex items-start gap-5 p-6 rounded-2xl border border-transparent hover:border-gray-100 hover:bg-gray-50/50 transition-all duration-300">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#B61F1F]/5 flex items-center justify-center transition-transform group-hover:scale-110">
+                <risk.icon class="text-[#B61F1F] w-6 h-6" strokeWidth={2.5} />
+              </div>
+              <div>
+                <h4 class="text-black font-bold text-xl tracking-tight">{risk.text}</h4>
+                <p class="text-gray-500 text-sm leading-relaxed mt-1">{risk.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="relative order-1 lg:order-2">
+        <div class="relative aspect-4/5 rounded-[12px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-gray-100">
+          <img 
+            src="/img/consecuencias-no-tener-sctr-peru-aliza-seguros.webp" 
+            alt="Ingenieros y operarios en obra civil cumpliendo con normativas de seguridad SCTR en Perú" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute bottom-6 left-6 right-6 p-4 bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl flex items-center gap-4">
+            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white">
+                <ShieldCheck size={20} />
+            </div>
+            <span class="text-xs font-black uppercase tracking-widest text-black/80">Evita Multas Hoy</span>
+          </div>
+        </div>
+        
+        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#B61F1F]/5 rounded-full blur-3xl"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  h2 {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  }
+  p, span, h4, a {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+</style>
