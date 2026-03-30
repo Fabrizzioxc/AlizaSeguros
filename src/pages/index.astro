@@ -5,11 +5,15 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Especialistas from '../components/Especialistas.astro';
 import WhyUs from '../components/WhyUs.tsx';
+import Perfil from '../components/Perfil';
+import QueCubre from '../components/QueCubre.astro';
 ---
 
 <Layout>
     <Header />
     <Hero />
     <Especialistas />
-    <WhyUs client:load />
+    <WhyUs client:visible />
+    <Perfil client:visible />
+    <QueCubre />
 </Layout>
