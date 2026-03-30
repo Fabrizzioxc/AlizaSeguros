@@ -116,35 +116,32 @@ export default function WhyUs() {
                   </p>
 
                   {/* BOTÓN CORREGIDO */}
-                  <a
-                    href="#contacto"
-                    className="
-                      inline-flex items-center gap-2
-                      bg-[#B61F1F] text-white hover:text-white
-                      px-8 py-3.5 rounded-[5px]
-                      font-bold text-sm
-                      no-underline hover:no-underline
+              <a
+                href="#contacto"
+                className="
+                  group inline-flex items-center justify-center gap-3
+                  bg-[#B61F1F] hover:bg-[#961a1a]
+                  text-white hover:text-white
+                  px-10 py-4
+                  font-bold text-base
+                  rounded-[5px]
+                  no-underline hover:no-underline
 
-                      transition-all duration-300 ease-out
-                      hover:bg-[#961a1a]
-                      hover:shadow-[0_10px_30px_rgba(182,31,31,0.4)]
-                      hover:-translate-y-0.5 active:translate-y-0
+                  transition-all duration-300 ease-out
+                  shadow-xl shadow-red-900/20
+                  hover:shadow-[0_12px_35px_rgba(182,31,31,0.35)]
+                  hover:-translate-y-0.5 active:translate-y-0
 
-                      focus:outline-none focus:ring-2 focus:ring-[#B61F1F]/40
+                  focus:outline-none focus:ring-2 focus:ring-[#B61F1F]/40
+                "
+              >
+                {item.buttonText}
 
-                      group
-                    "
-                  >
-                    {item.buttonText}
-
-                    <ArrowUpRight
-                      size={18}
-                      className="
-                        transition-transform duration-300
-                        group-hover:translate-x-1 group-hover:-translate-y-1
-                      "
-                    />
-                  </a>
+                <ArrowUpRight
+                  size={20}
+                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </a>
                 </AccordionContent>
               </AccordionItem>
             ))}
