@@ -1,0 +1,33 @@
+---
+// Icono SVG de flecha para el botón
+const ArrowRightSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>`;
+---
+
+<section class="max-w-8xl mx-auto px-4 py-20">
+  <div class="bg-[#B61F1F] rounded-2xl p-12 md:p-35 flex flex-col items-center text-center">
+    
+    <h2 class="text-white text-3xl md:text-7xl font-extrabold mb-12 leading-[1.1] tracking-tight max-w-7xl">
+      Protege a tu equipo y <br class="hidden md:block" /> asegura el futuro de tu empresa hoy
+    </h2>
+
+    <p class="text-white/80 text-lg md:text-xl mb-12 max-w-2xl font-medium">
+      Obtén tu SCTR corporativo en minutos con el respaldo de Aliza Seguros.
+    </p>
+
+    <a 
+      href="/contacto" 
+      class="group inline-flex items-center justify-center gap-3 bg-[#121212] hover:bg-[#1a1a1a] text-white px-55 py-5 font-bold text-base transition-all rounded-[5px] shadow-2xl shadow-black/20"
+    >
+      Contactar con un asesor
+      <Fragment set:html={ArrowRightSvg} />
+    </a>
+
+  </div>
+</section>
+
+<style>
+  /* Aplicando Bricolage Grotesque si está disponible, de lo contrario Sans-serif */
+  h2 {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  }
+</style>
