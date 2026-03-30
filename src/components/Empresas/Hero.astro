@@ -1,0 +1,70 @@
+---
+import { ArrowUpRight, MessageCircle } from 'lucide-astro';
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="/img/sctr-seguro-empresas-construccion-peru.webp" 
+      alt="Casco de seguridad y planos de construcción para SCTR empresas en Perú" 
+      class="w-full h-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+    
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md mb-8">
+      <div class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
+        <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <span class="text-white text-sm font-medium tracking-wide">
+        Para empresas de alto riesgo en Perú
+      </span>
+    </div>
+
+    <h1 class="text-white text-4xl md:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight max-w-6xl mx-auto">
+      Protege a tu equipo y <span class="text-[#B61F1F] drop-shadow-md">cumple la normativa</span> sin complicaciones
+    </h1>
+
+    <p class="text-white/80 text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
+      Gestionamos el SCTR para toda tu empresa: emisión rápida, precios <br class="hidden md:block" />
+      competitivos y acompañamiento para que nunca pierdas cobertura.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+      <a 
+        href="#contacto" 
+        class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#B61F1F] hover:bg-[#961a1a] text-white px-10 py-5 font-bold text-base transition-all rounded-[5px] shadow-xl shadow-red-900/20"
+      >
+        Cotizar mi SCTR Ahora
+        <ArrowUpRight size={20} class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+      </a>
+
+      <a 
+        href="https://wa.me/+51917410446" 
+        target="_blank" 
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-5 font-bold text-base hover:bg-white/10 transition-all rounded-[5px]"
+      >
+        Hablar Por WhatsApp
+        <MessageCircle class="w-5 h-5 fill-white/10" />
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  h1 {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  }
+  
+  /* Efecto sutil de sombra al texto rojo para resaltar sobre el fondo oscuro */
+  .text-\[\#B61F1F\] {
+    text-shadow: 0 0 20px rgba(182, 31, 31, 0.2);
+  }
+</style>
