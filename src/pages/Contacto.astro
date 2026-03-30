@@ -1,11 +1,103 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/Contacto/ContactForm';
+import Badge from '../components/Badge.astro';
+import { MessageSquare, Phone, Mail, Clock } from "lucide-astro";
+
+const contactLinks = [
+  { 
+    icon: MessageSquare, 
+    title: "WhatsApp", 
+    val: "+51 917 410 446", 
+    desc: "Respuesta inmediata · Lun-Sab 8am-7pm",
+    href: "https://wa.me/51917410446"
+  },
+  { 
+    icon: Phone, 
+    title: "Teléfono", 
+    val: "+51 917 410 446", 
+    desc: "Llamadas · Lun-Sab 8am-7pm",
+    href: "tel:+51917410446"
+  },
+  { 
+    icon: Mail, 
+    title: "Correo Electrónico", 
+    val: "a.lizaseguros@gmail.com", 
+    desc: "Respuesta en 24h hábiles",
+    href: "mailto:a.lizaseguros@gmail.com" 
+  },
+  { 
+    icon: Clock, 
+    title: "Horario de atención", 
+    val: "Lunes - Viernes", 
+    desc: "9:00 am - 6:00 pm (Sábados hasta la 1pm)",
+    href: "#"
+  },
+];
 ---
 
 <Layout 
   title="Contacto | Asesoría en Seguros SCTR en Perú | Aliza Seguros"
   description="¿Tienes dudas sobre tu póliza de SCTR? Habla con nuestros asesores expertos. Te ayudamos a elegir la mejor cobertura para tu empresa o proyecto personal."
 >
+  <section class="bg-white py-24 md:py-32 overflow-hidden min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+      
+      <div class="flex flex-col items-center text-center mb-20 relative">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-[#B61F1F]/5 blur-[80px] rounded-full z-0"></div>
+        
+        <Badge 
+          text="Atención Inmediata" 
+          variant="default" 
+          size="sm" 
+          className="mb-8 border-black/5 bg-gray-100 text-black/60 relative z-10 shadow-sm" 
+        />
+        <h1 class="text-5xl md:text-7xl font-extrabold text-black tracking-tighter leading-[1.1] max-w-3xl font-['Bricolage_Grotesque'] relative z-10">
+          Hablemos de tu <span class="text-[#B61F1F]">tranquilidad.</span>
+        </h1>
+        <p class="mt-6 text-gray-500 text-lg md:text-xl max-w-2xl font-['Inter'] relative z-10 leading-relaxed">
+          Estamos aquí para asesorarte. Elige el canal que prefieras o completa el formulario para una cotización formal.
+        </p>
+      </div>
 
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        
+        <div class="lg:col-span-5 space-y-4 order-2 lg:order-1">
+          {contactLinks.map((item) => (
+            <a 
+              href={item.href}
+              class="flex items-center gap-6 p-6 rounded-[28px] border border-gray-100 bg-white hover:bg-gray-50/50 hover:border-gray-200 transition-all duration-300 group shadow-lg shadow-gray-950/5 hover:shadow-[#B61F1F]/5"
+            >
+              <div class="w-16 h-16 bg-[#B61F1F]/5 rounded-2xl flex items-center justify-center text-[#B61F1F] shadow-sm border border-[#B61F1F]/10 transition-all duration-500 group-hover:scale-110 group-hover:bg-[#B61F1F] group-hover:text-white group-hover:shadow-[0_0_20px_rgba(182,31,31,0.3)]">
+                <item.icon size={28} strokeWidth={1.5} class="transition-transform duration-500 group-hover:rotate-[15deg]" />
+              </div>
+              
+              <div>
+                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-1.5 transition-colors group-hover:text-[#B61F1F]">
+                  {item.title}
+                </p>
+                <h4 class="text-xl font-bold text-black font-['Inter'] tracking-tight leading-none group-hover:text-[#B61F1F] transition-colors">
+                  {item.val}
+                </h4>
+                <p class="text-sm text-gray-500 font-['Inter'] leading-relaxed mt-1 group-hover:text-gray-700 transition-colors">
+                  {item.desc}
+                </p>
+              </div>
+            </a>
+          ))}
+          
+          <div class="p-8 mt-10 rounded-[32px] bg-gray-50/50 border border-dashed border-gray-200 shadow-inner">
+            <p class="text-sm text-gray-500 leading-relaxed font-['Inter'] italic">
+              "Nuestro compromiso es que tu equipo esté protegido en tiempo récord, cumpliendo con todas las normativas de SUNAFIL".
+            </p>
+          </div>
+        </div>
 
+        <div class="lg:col-span-7 order-1 lg:order-2">
+          <ContactForm client:load />
+        </div>
+
+      </div>
+    </div>
+  </section>
 </Layout>
