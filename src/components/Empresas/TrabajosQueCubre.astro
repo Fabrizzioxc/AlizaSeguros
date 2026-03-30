@@ -1,0 +1,92 @@
+---
+import Badge from "../Badge.astro";
+import { ArrowRight } from "lucide-astro";
+
+const sectors = [
+  {
+    title: "CONSTRUCCIÓN Y OBRAS CIVILES",
+    description: "Asegura a tu personal para ingresar a obra sin retrasos y cumplir con los requisitos de seguridad.",
+    image: "/img/sctr-construccion-obras-peru.webp",
+    alt: "Trabajadores de construcción civil en obra con SCTR",
+    tag: "Construcción"
+  },
+  {
+    title: "METALMECÁNICA",
+    description: "Protege a tu personal en trabajos de fabricación, soldadura y mantenimiento industrial.",
+    image: "/img/sctr-metalmecanica-industrial.webp",
+    alt: "Operario de metalmecanica soldando con proteccion SCTR",
+    tag: "Industria"
+  },
+  {
+    title: "COMERCIO Y SERVICIOS",
+    description: "Asegura a tu equipo en actividades técnicas y servicios que requieren cumplimiento.",
+    image: "/img/sctr-comercio-servicios-tecnicos.webp",
+    alt: "Técnico de servicios realizando mantenimiento especializado",
+    tag: "Servicios"
+  },
+  {
+    title: "TRANSPORTE",
+    description: "Cobertura para operaciones de transporte y logística que exigen SCTR.",
+    image: "/img/sctr-transporte-logistica-carga.webp",
+    alt: "Camión de transporte logístico circulando por carretera en Perú",
+    tag: "Logística"
+  },
+];
+---
+
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <div class="flex flex-col items-center text-center mb-16">
+    <Badge text="Trabajos que cubre el SCTR" variant="default" className="mb-6" />
+    <h2 class="text-4xl md:text-6xl font-extrabold text-black leading-tight tracking-tight max-w-4xl">
+      Cobertura en <br /> los distintos sectores del Perú.
+    </h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {
+      sectors.map((sector) => (
+        <a 
+          href="/contacto" 
+          class="group relative h-[450px] overflow-hidden rounded-[32px] flex flex-col justify-end p-8 md:p-12 transition-all duration-500 hover:shadow-2xl hover:shadow-black/20 active:scale-[0.98]"
+        >
+          <div class="absolute inset-0 z-0">
+            <img 
+              src={sector.image} 
+              alt={sector.alt} 
+              class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent transition-opacity duration-500 group-hover:opacity-80"></div>
+          </div>
+
+          <div class="relative z-10 space-y-4">
+            
+            <div class="inline-flex items-center">
+              <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-white/90 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full">
+                {sector.tag}
+              </span>
+            </div>
+            
+            <h3 class="text-3xl md:text-4xl font-extrabold text-white leading-none uppercase tracking-tighter">
+              {sector.title}
+            </h3>
+            
+            <p class="text-white/70 text-lg leading-relaxed max-w-[450px] transition-colors duration-300 group-hover:text-white">
+              {sector.description}
+            </p>
+
+            <div class="flex items-center gap-2 text-white font-bold text-lg pt-4">
+              <span class="border-b-2 border-transparent group-hover:border-[#B61F1F] transition-all">Ver cobertura</span>
+              <ArrowRight class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2 text-[#B61F1F]" />
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  h2, h3 {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  }
+</style>
