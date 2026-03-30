@@ -17,14 +17,6 @@ const {
 <html lang="es"> <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-
-        <link 
-      rel="preload" 
-      href="/_astro/geist-latin-900-normal.Dm3htQBi.woff2" 
-      as="font" 
-      type="font/woff2" 
-      crossorigin="anonymous"
-    />
         
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,13 +31,7 @@ const {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/og-image.jpg" />
-        
-        <style is:global>
-          @font-face {
-            font-family: 'Inter';
-            font-display: swap;
-          }
-        </style>
+      
     </head>
     <body>
         <Header />
@@ -55,10 +41,14 @@ const {
     </body>
 </html>
 
-<style>
+<style is:global>
     html, body {
         margin: 0;
         width: 100%;
         height: 100%;
     }
+    @font-face {
+    font-family: 'Inter';
+    font-display: swap;
+  }
 </style>
