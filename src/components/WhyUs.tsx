@@ -55,7 +55,7 @@ export default function WhyUs() {
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <span className="w-2 h-2 rounded-full bg-black"></span>
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-700">
               Por qué elegirnos
             </span>
           </div>
