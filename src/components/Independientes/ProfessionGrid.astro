@@ -1,0 +1,58 @@
+---
+import Badge from "../Badge.astro";
+import { 
+  HardHat, 
+  Ruler, 
+  Zap, 
+  Wrench, 
+  Hammer, 
+  Truck 
+} from "lucide-astro";
+
+const professions = [
+  { name: "Ingenieros", icon: HardHat },
+  { name: "Arquitectos", icon: Ruler },
+  { name: "Electricistas", icon: Zap },
+  { name: "Técnicos", icon: Wrench },
+  { name: "Maestros de obra", icon: Hammer },
+  { name: "Operadores", icon: Truck },
+];
+---
+
+<section class="max-w-7xl mx-auto px-6 py-24">
+  <div class="flex flex-col items-center text-center mb-20">
+    <Badge text="Cumplimiento Garantizado" variant="default" className="mb-6" />
+    <h2 class="text-4xl md:text-6xl font-extrabold text-black leading-tight tracking-tight max-w-4xl">
+      <span class="text-[#B61F1F]">Protegemos</span> <br />
+      el talento que construye el país
+    </h2>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200 rounded-3xl overflow-hidden shadow-sm">
+    {
+      professions.map((item) => (
+        <div class="group relative bg-white p-10 md:p-14 flex items-center gap-6 transition-all duration-500 hover:bg-[#FAFAFA]">
+          
+          <div class="text-gray-400 transition-all duration-500 ease-out group-hover:text-[#B61F1F] group-hover:translate-x-2">
+            <item.icon size={40} strokeWidth={1.2} />
+          </div>
+
+          <span class="text-xl md:text-2xl font-semibold text-gray-900 tracking-tight transition-all duration-500 group-hover:text-black">
+            {item.name}
+          </span>
+
+          <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-0 bg-[#B61F1F] transition-all duration-500 group-hover:h-1/2"></div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  h2 {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  }
+  span {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+</style>
