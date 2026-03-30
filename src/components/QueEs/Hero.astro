@@ -1,0 +1,52 @@
+---
+import { ShieldCheck, MessageCircle, ArrowUpRight } from "lucide-astro";
+---
+
+<section class="bg-white py-32 md:py-48 relative">
+  <div class="max-w-7xl mx-auto px-6 text-center flex flex-col items-center">
+    
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/5 bg-gray-50 mb-10">
+      <ShieldCheck class="w-4 h-4 text-[#B61F1F]" />
+      <span class="text-black text-[12px] font-bold uppercase tracking-[0.1em]">
+        Guía Informativa SCTR
+      </span>
+    </div>
+
+    <h1 class="text-black text-5xl md:text-7xl font-extrabold mb-8 leading-[1.05] tracking-tight max-w-4xl mx-auto">
+      ¿Qué es el SCTR y cuándo es <span class="text-[#B61F1F]">obligatorio</span> en Perú?
+    </h1>
+
+    <p class="text-gray-500 text-xl md:text-2xl mb-14 max-w-2xl mx-auto leading-relaxed font-medium">
+      Todo lo que necesitas saber sobre el Seguro Complementario de Trabajo de Riesgo para operar bajo la normativa vigente.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
+      <a 
+        href="/cotizar" 
+        class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#B61F1F] text-white px-10 py-5 font-bold text-base transition-all rounded-[4px] hover:bg-black"
+      >
+        Cotizar mi SCTR Ahora
+        <ArrowUpRight size={20} class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+      </a>
+
+      <a 
+        href="https://wa.me/..." 
+        target="_blank" 
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-3 border-2 border-black text-black px-10 py-5 font-bold text-base hover:bg-black hover:text-white transition-all rounded-[4px]"
+      >
+        Asesoría por WhatsApp
+        <MessageCircle size={20} />
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  h1 {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  }
+  p, span, a {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+</style>
