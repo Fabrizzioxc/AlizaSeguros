@@ -28,7 +28,7 @@ export function CustomTabs<T extends string>({
       <div
         className="
           w-full max-w-7xl
-          bg-slate-100 border border-slate-200 p-1.5
+          bg-slate-100 border rounded-sm border-slate-200 p-1.5
           
           flex flex-row
           gap-2
@@ -43,7 +43,7 @@ export function CustomTabs<T extends string>({
               onClick={() => onChange(tab.key)}
               className={clsx(
                 `
-                flex items-center justify-center gap-2 sm:gap-3
+                flex items-center justify-center rounded-sm gap-2 sm:gap-3
                 w-full sm:flex-1
 
                 px-4 sm:px-8
