@@ -1,26 +1,72 @@
 ---
 // src/components/Header.astro
-import { ChevronDown } from 'lucide-astro';
+import { Menu, X } from "lucide-astro";
 ---
+
 <header class="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10 tracking-tight">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
     
+    <!-- Logo -->
     <div class="flex items-center gap-2">
       <span class="text-white font-bold text-lg uppercase tracking-tighter">
         Aliza <span class="text-[#B61F1F]">Seguros</span>
       </span>
     </div>
 
+    <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-10 text-[13px] uppercase font-semibold tracking-widest text-gray-300">
-      <a href="#empresas" class="hover:text-[#B61F1F] transition-colors flex items-center gap-1.5 group">
-        Empresas 
-      </a>
+      <a href="#empresas" class="hover:text-[#B61F1F] transition-colors">Empresas</a>
       <a href="#independientes" class="hover:text-[#B61F1F] transition-colors">Independientes</a>
       <a href="#que-es" class="hover:text-[#B61F1F] transition-colors">¿Qué es?</a>
     </nav>
 
-    <a href="https://wa.me/tu-numero-aliza" target="_blank" class="bg-[#B61F1F] hover:bg-[#961a1a] text-white px-7 py-2.5 font-bold text-sm transition-all rounded-[5px]">
+    <!-- Desktop CTA -->
+    <a 
+      href="https://wa.me/tu-numero-aliza" 
+      target="_blank" 
+      class="hidden md:inline-flex bg-[#B61F1F] hover:bg-[#961a1a] text-white px-7 py-2.5 font-bold text-sm transition-all rounded-[5px]"
+    >
       Contáctanos
     </a>
+
+    <!-- Mobile Button -->
+    <button 
+      id="menu-btn"
+      class="md:hidden text-white"
+      aria-label="Abrir menú"
+    >
+      <Menu size={26} />
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div 
+    id="mobile-menu"
+    class="hidden md:hidden bg-black border-t border-white/10"
+  >
+    <div class="flex flex-col px-6 py-6 gap-6 text-sm uppercase font-semibold tracking-widest text-gray-300">
+      
+      <a href="#empresas" class="hover:text-[#B61F1F] transition-colors">Empresas</a>
+      <a href="#independientes" class="hover:text-[#B61F1F] transition-colors">Independientes</a>
+      <a href="#que-es" class="hover:text-[#B61F1F] transition-colors">¿Qué es?</a>
+
+      <a 
+        href="https://wa.me/51917410446"
+        target="_blank" 
+        class="mt-4 bg-[#B61F1F] hover:bg-[#961a1a] text-white px-6 py-3 text-center font-bold rounded-[5px]"
+      >
+        Contáctanos
+      </a>
+    </div>
   </div>
 </header>
+
+<!-- Script simple para toggle -->
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>
