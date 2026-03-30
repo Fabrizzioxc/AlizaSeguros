@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { CustomTabs } from "../CustomTabs";
 import { Building2, User, Send, FileText, Hash, Mail, Phone } from "lucide-react";
 
@@ -126,7 +126,7 @@ export default function ContactForm() {
               </div>
               <div className="absolute left-11 flex items-center pointer-events-none">
                 <span className="text-sm text-gray-400 font-medium">+51</span>
-                <div className="h-4 w-[1px] bg-gray-200 ml-2"></div>
+                <div className="h-4 w-px bg-gray-200 ml-2"></div>
               </div>
               <input type="tel" placeholder="999 999 999" className="w-full bg-gray-50 border border-gray-100 text-sm rounded-2xl p-3.5 pl-24 outline-none transition-all focus:ring-4 focus:ring-[#B61F1F]/10 focus:border-[#B61F1F]" />
             </div>
