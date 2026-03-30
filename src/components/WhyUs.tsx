@@ -79,7 +79,7 @@ export default function WhyUs() {
               <AccordionItem
                 key={item.id}
                 value={item.id}
-                className={`border-b border-gray-300 transition-colors duration-500 ${
+                className={`border-b border-gray-300 transition-colors ${
                   activeTab === item.id
                     ? "bg-black text-white"
                     : "bg-transparent text-slate-950"
@@ -154,7 +154,7 @@ export default function WhyUs() {
                 key={item.id}
                 src={item.image}
                 alt={item.title}
-                className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
+                className={`absolute inset-0 w-full h-full object-cover ${
                   activeTab === item.id
                     ? "opacity-100 scale-100 rotate-0"
                     : "opacity-0 scale-105 rotate-1"
@@ -170,7 +170,7 @@ export default function WhyUs() {
                 key={item.id}
                 src={item.image}
                 alt={item.title}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                className={`absolute inset-0 w-full h-full object-cover ${
                   activeTab === item.id ? "opacity-100" : "opacity-0"
                 }`}
               />
