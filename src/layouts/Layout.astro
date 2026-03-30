@@ -1,4 +1,6 @@
 ---
+import Footer from '@/components/Footer.astro'
+import Header from '@/components/Header.astro'
 import '../styles/global.css'
 ---
 
@@ -13,7 +15,11 @@ import '../styles/global.css'
 		<title>Aliza Seguros</title>
 	</head>
 	<body>
+	    <Header />
+		<main>
 		<slot />
+		</main>
+	    <Footer />
 	</body>
 </html>
 
