@@ -27,8 +27,8 @@ export function CustomTabs<T extends string>({
       
       <div
         className="
-          w-full max-w-6xl
-          bg-slate-100 border border-slate-200 rounded-xl p-1.5
+          w-full max-w-7xl
+          bg-slate-100 border border-slate-200 p-1.5
           
           flex flex-row
           gap-2
@@ -50,7 +50,7 @@ export function CustomTabs<T extends string>({
                 py-3 sm:py-4
 
                 text-sm sm:text-base font-bold
-                rounded-lg
+                
                 `,
                 isActive
                   ? "bg-white text-black shadow-sm"
