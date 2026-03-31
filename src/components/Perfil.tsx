@@ -124,12 +124,16 @@ export default function Perfil() {
               ))}
             </ul>
 
-            <a
-              href="/Contacto"
-              className="inline-flex items-center gap-3 bg-[#B61F1F] hover:bg-slate-950 text-white px-10 py-5 font-bold text-base rounded-[5px]"
+            <a 
+              href="/Contacto" 
+              className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#B61F1F] hover:bg-[#991616] text-white px-8 md:px-16 py-5 font-bold text-base transition-all rounded-[5px] shadow-2xl shadow-black/20"
             >
-              {content.cta}
-              <ArrowUpRight size={20} />
+              Contactar con un asesor
+              <ArrowUpRight 
+                size={22} 
+                strokeWidth={2.5}
+                className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" 
+              />
             </a>
           </div>
         </div>

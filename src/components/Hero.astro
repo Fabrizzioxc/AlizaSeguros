@@ -30,10 +30,17 @@ import Whatsapp from './icons/whatsapp.astro';
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href="/Contacto" class="inline-flex items-center justify-center gap-2 bg-[#B61F1F] text-white px-8 py-4 font-bold text-base hover:bg-[#961a1a] transition-all rounded-[5px] shadow-xl shadow-red-950/30">
-          Cotizar mi SCTR Ahora
-          <ArrowUpRight size={20} strokeWidth={2.5} />
-        </a>
+      <a 
+        href="/Contacto" 
+        class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#B61F1F] hover:bg-[#991616] text-white px-8 md:px-16 py-5 font-bold text-base transition-all rounded-[5px] shadow-2xl shadow-black/20"
+      >
+        Contactar con un asesor
+        <ArrowUpRight 
+          size={22} 
+          strokeWidth={2.5}
+          class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" 
+        />
+      </a>
         
         <a href="https://wa.me/+51917410446" target="_blank" class="inline-flex items-center justify-center gap-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 font-bold text-base hover:bg-white/10 transition-all rounded-[5px]" aria-label="Ir a WhatsApp">
           Hablar Por WhatsApp

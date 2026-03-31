@@ -1,6 +1,7 @@
 ---
 // src/components/Especialistas.astro
 import { ArrowRight } from 'lucide-astro';
+import { ArrowUpRight } from 'lucide-react';
 ---
 
 <section class="w-full bg-white py-24 md:py-32 overflow-hidden">
@@ -33,10 +34,17 @@ import { ArrowRight } from 'lucide-astro';
         </p>
 
         <div class="pt-4">
-          <a href="/Contacto" class="group inline-flex items-center justify-center gap-3 bg-[#B61F1F] hover:bg-[#961a1a] text-white px-10 py-5 font-bold text-base transition-all rounded-[5px] shadow-xl shadow-red-900/20">
-            Obtener Cotización Instantánea
-            <ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
-          </a>
+        <a 
+          href="/Contacto" 
+          class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#B61F1F] hover:bg-[#991616] text-white px-8 md:px-16 py-5 font-bold text-base transition-all rounded-[5px] shadow-2xl shadow-black/20"
+        >
+          Contactar con un asesor
+          <ArrowUpRight 
+            size={22} 
+            strokeWidth={2.5}
+            className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" 
+          />
+        </a>
         </div>
       </div>
     </div>
