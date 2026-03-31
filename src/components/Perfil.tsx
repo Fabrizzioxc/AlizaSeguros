@@ -125,7 +125,7 @@ export default function Perfil() {
             </ul>
 
             <a
-              href="#contacto"
+              href="/Contacto"
               className="inline-flex items-center gap-3 bg-[#B61F1F] hover:bg-slate-950 text-white px-10 py-5 font-bold text-base rounded-[5px]"
             >
               {content.cta}

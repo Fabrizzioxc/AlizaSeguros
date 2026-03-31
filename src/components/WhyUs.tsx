@@ -117,7 +117,7 @@ export default function WhyUs() {
 
                   {/* BOTÓN CORREGIDO */}
               <a
-                href="#contacto"
+                href="/Contacto"
                 className="
                   group inline-flex items-center justify-center gap-3
                   bg-[#B61F1F] hover:bg-[#961a1a]
