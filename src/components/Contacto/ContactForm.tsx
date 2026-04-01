@@ -30,7 +30,7 @@ interface FormErrors {
   privacidad?: string;
 }
 
-const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxR-tF8UJbeWX-Y8QoOeyRSGfLN6kOJxv7u07bYcSzH7kDiDdGBYEJEGhY44z4uBnu5cw/exec"; // Reemplaza con tu URL
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyZQJfxIOjgxLD5i7iZ1funExDiB88yMR5vzEXbbg18SuxYkvlBXR7PgkqslYzpZPJImw/exec"; // Reemplaza con tu URL
 
 export default function ContactForm() {
   const [activeTab, setActiveTab] = useState<TabType>("empresa");
