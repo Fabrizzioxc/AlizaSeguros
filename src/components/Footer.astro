@@ -1,6 +1,8 @@
 ---
 import Facebook from "../components/icons/facebook.astro";
 import Whatsapp from "../components/icons/whatsapp.astro";
+import Tiktok from "../components/icons/tiktok.astro";
+import Instagram from "../components/icons/instagram.astro";
 
 interface Props {
   email?: string;
@@ -46,6 +48,26 @@ const {
             class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#B61F1F]/20 hover:border-[#B61F1F]/40 transition-all"
           >
             <Facebook class="w-5 h-5" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/alizaseguros/"
+            target="_blank"
+            rel="noopener noreferrer" 
+            aria-label="Visitar nuestra página de Instagram"
+            class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#B61F1F]/20 hover:border-[#B61F1F]/40 transition-all"
+          >
+            <Instagram class="w-5 h-5" />
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@alizaseguros?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            rel="noopener noreferrer" 
+            aria-label="Visitar nuestra página de TikTok"
+            class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#B61F1F]/20 hover:border-[#B61F1F]/40 transition-all"
+          >
+            <Tiktok class="w-5 h-5" />
           </a>
         </div>
       </div>
