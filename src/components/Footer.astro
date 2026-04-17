@@ -18,101 +18,66 @@ const {
 <footer class="w-full bg-white mt-auto px-5 py-0">
   <div class="max-w-8xl mx-auto bg-[#121212] px-10 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20 rounded-t-[45px]">
     
-    <!-- TOP -->
-    <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 mb-8">
+    <div class="flex flex-col md:flex-row justify-between gap-12">
       
-      <!-- Logo -->
-      <div class="text-center md:text-left">
-        <span class="text-xl font-bold text-white tracking-tight">
+      <div class="flex-1 max-w-sm text-center md:text-left">
+        <span class="text-2xl font-bold text-white tracking-tight">
           Aliza <span class="text-[#B61F1F]">Seguros</span>
         </span>
-      </div>
-
-      <!-- Nav (CENTRADO REAL) -->
-      <nav class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 flex-1 text-center">
-        <a href="#empresas" class="text-sm text-gray-300 hover:text-[#B61F1F] transition">
-          SCTR para empresas
-        </a>
-        <a href="#independientes" class="text-sm text-gray-300 hover:text-[#B61F1F] transition">
-          SCTR para independientes
-        </a>
-        <a href="#que-es" class="text-sm text-gray-300 hover:text-[#B61F1F] transition">
-          ¿Qué es?
-        </a>
-        <a href="/Contacto" class="text-sm text-gray-300 hover:text-[#B61F1F] transition">
-          Contacto
-        </a>
-      </nav>
-
-      <!-- Social -->
-      <div class="flex gap-3">
-        <a
-          href="https://wa.me/51917410446"
-          target="_blank"
-          class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#B61F1F]/20 hover:border-[#B61F1F]/40"
-          aria-label="Contactar por WhatsApp"
-        >
-          <Whatsapp class="w-5 h-5" />
-        </a>
-
-        <a
-        href="https://www.facebook.com/profile.php?id=100086219962154"
-        target="_blank"
-        rel="noopener noreferrer" 
-        aria-label="Visitar nuestra página de Facebook"
-        class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#B61F1F]/20 hover:border-[#B61F1F]/40 transition-all"
-      >
-        <Facebook class="w-5 h-5" />
-      </a>
-      </div>
-    </div>
-
-    <!-- Divider -->
-    <div class="h-px bg-white/10 my-8"></div>
-
-    <!-- MIDDLE -->
-    <div class="flex flex-col lg:flex-row justify-between gap-8 mb-8">
-      
-      <!-- Contacto -->
-    <div class="flex-1">
-        <span class="inline-block text-xs font-bold text-white uppercase tracking-widest bg-[#B61F1F] px-3 py-1.5 rounded">
-        Contacto
-        </span>
-
-        <div class="mt-4 space-y-3 text-sm text-gray-300 flex flex-col items-start">
-        <a href={`mailto:${email}`} class="hover:text-[#B61F1F] transition w-fit">
-            {email}
-        </a>
-        <a href={`tel:${phone}`} class="hover:text-[#B61F1F] transition w-fit">
-            {phone}
-        </a>
-        <span>{address}</span>
-        </div>
-    </div>
-
-      <!-- FORM -->
-      <form class="flex flex-col sm:flex-row items-stretch gap-3 bg-[#292A32] p-3 rounded-xl border border-white/10 w-full lg:w-auto lg:min-w-230">
+        <p class="mt-4 text-gray-400 text-sm leading-relaxed">
+          Brindamos soluciones integrales en seguros SCTR para empresas e independientes, garantizando la protección que tu equipo necesita con el respaldo de expertos.
+        </p>
         
-        <input
-          type="email"
-          placeholder="Tu correo"
-          class="flex-1 min-w-0 px-4 py-3 bg-transparent border border-white/20 rounded-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#B61F1F] focus:ring-2 focus:ring-[#B61F1F]/20"
-          required
-        />
+        <div class="flex gap-3 mt-6 justify-center md:justify-start">
+          <a
+            href="https://wa.me/51917410446"
+            target="_blank"
+            class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#B61F1F]/20 hover:border-[#B61F1F]/40 transition-all"
+            aria-label="Contactar por WhatsApp"
+          >
+            <Whatsapp class="w-5 h-5" />
+          </a>
 
-        <button
-          type="submit"
-          class="px-6 py-3 bg-[#B61F1F] hover:bg-[#961a1a] text-white font-semibold text-sm rounded-lg transition-all whitespace-nowrap hover:-translate-y-0.5 shrink-0"
-        >
-          Enviar
-        </button>
-      </form>
+          <a
+            href="https://www.facebook.com/profile.php?id=100086219962154"
+            target="_blank"
+            rel="noopener noreferrer" 
+            aria-label="Visitar nuestra página de Facebook"
+            class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#B61F1F]/20 hover:border-[#B61F1F]/40 transition-all"
+          >
+            <Facebook class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-12 text-center md:text-left">
+        
+        <nav class="flex flex-col gap-4">
+          <span class="text-[#B61F1F] font-bold uppercase tracking-widest text-xs mb-2">Servicios</span>
+          <a href="#empresas" class="text-sm text-gray-300 hover:text-[#B61F1F] transition">SCTR Empresas</a>
+          <a href="#independientes" class="text-sm text-gray-300 hover:text-[#B61F1F] transition">SCTR Independientes</a>
+          <a href="#que-es" class="text-sm text-gray-300 hover:text-[#B61F1F] transition">¿Qué es?</a>
+          <a href="/Contacto" class="text-sm text-gray-300 hover:text-[#B61F1F] transition">Contacto</a>
+        </nav>
+
+        <div class="flex flex-col gap-4">
+          <span class="text-[#B61F1F] font-bold uppercase tracking-widest text-xs mb-2">Contacto</span>
+          <div class="space-y-3 text-sm text-gray-300 flex flex-col items-center md:items-start">
+            <a href={`mailto:${email}`} class="hover:text-[#B61F1F] transition">
+              {email}
+            </a>
+            <a href={`tel:${phone}`} class="hover:text-[#B61F1F] transition">
+              {phone}
+            </a>
+            <span class="max-w-[150px]">{address}</span>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- Divider -->
     <div class="h-px bg-white/10 my-8"></div>
 
-    <!-- BOTTOM -->
     <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
       <p class="m-0">© Desarrollado por Fabrizzio Zambrano</p>
       <a href="/politicas-privacidad" class="hover:text-[#B61F1F] transition">
