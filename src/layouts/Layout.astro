@@ -25,9 +25,18 @@ const {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/og-image.jpg" />
+
+        <!-- Google Tag Manager -->
+        <script is:inline src="/gtm.js"></script>
+        <!-- End Google Tag Manager -->
+
       
     </head>
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM3GC79H"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <Header />
         <main id="main-content"> <slot />
         </main>
