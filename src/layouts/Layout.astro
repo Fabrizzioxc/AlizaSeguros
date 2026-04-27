@@ -3,43 +3,63 @@ import Footer from '@/components/Footer.astro'
 import Header from '@/components/Header.astro'
 import '../styles/global.css'
 
+// Variables dinámicas para SEO
 const { 
-  title = "Aliza Seguros",
-  description = "Obtén tu SCTR en Perú de forma rápida y digital. Cumple con SUNAFIL sin complicaciones."
+  title = "Aliza Seguros | SCTR Inmediato en Perú - Asesoría Independiente",
+  description = "Obtén tu SCTR en 15 minutos. Asesoría experta e independiente para empresas y trabajadores independientes. Evita multas de SUNAFIL hoy.",
+  author = "Aliza Seguros"
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="es"> <head>
+<html lang="es"> 
+    <head>
+        <script is:inline>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PRC4WDZG');
+        </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        
         <link rel="icon" type="image/svg+xml" href="/aa.svg" />
         <link rel="icon" href="/aa.ico" />
         <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
-        <meta name="robots" content="index, follow" />
         
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content="aliza seguros, sctr peru, sunafil sctr, asesor independiente, sctr inmediato" />
+        <meta name="author" content={author} />
+        <link rel="canonical" href={canonicalURL} />
+        <meta name="robots" content="index, follow" /> 
+
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:image" content="/og-image.jpg" /> 
 
-        <!-- Google Tag Manager -->
-        <script is:inline src="/gtm.js"></script>
-        <!-- End Google Tag Manager -->
-
-      
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="/og-image.jpg" />
     </head>
+
     <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM3GC79H"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRC4WDZG"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        
         <Header />
-        <main id="main-content"> <slot />
+        
+        <main id="main-content"> 
+            <slot /> 
         </main>
+
         <Footer />
     </body>
 </html>
@@ -49,10 +69,11 @@ const {
         margin: 0;
         width: 100%;
         height: 100%;
+        font-family: 'Geist', sans-serif;
     }
     @font-face {
-  font-family: 'Geist';
-  src: url('/fonts/geist.woff2') format('woff2');
-  font-display: swap;
-}
+        font-family: 'Geist';
+        src: url('/fonts/geist.woff2') format('woff2');
+        font-display: swap;
+    }
 </style>

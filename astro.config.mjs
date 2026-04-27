@@ -8,6 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
+  site: 'https://www.alizaseguros.com',
 
   build: {
     inlineStylesheets: 'auto'
